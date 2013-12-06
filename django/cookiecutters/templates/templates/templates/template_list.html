@@ -1,0 +1,14 @@
+{% for language in object_list %}
+    <li>
+        {{ language.name }}
+        {% with language.template_set.all as templates %}
+            {% if templates %}
+                <ul>
+                    {% for template in templates %}
+                        <li>{{ template.name }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </li>
+{% endfor %}
