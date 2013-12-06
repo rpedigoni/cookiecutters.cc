@@ -1,6 +1,7 @@
 # coding: utf-8
 from django.conf.urls import patterns, include, url
-from templates.views import LanguageListView
+from projects.views import LanguageListView
+
 # from django.contrib import admin
 # admin.autodiscover()
 

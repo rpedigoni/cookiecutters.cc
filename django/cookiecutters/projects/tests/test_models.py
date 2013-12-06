@@ -1,6 +1,6 @@
 # coding: utf-8
 from django.test.testcases import TestCase
-from factories import LanguageFactory, TemplateFactory
+from factories import LanguageFactory, ProjectFactory
 
 
 class LanguageTestCase(TestCase):
@@ -10,8 +10,8 @@ class LanguageTestCase(TestCase):
         self.assertEqual(unicode(language), language.name)
 
 
-class TemplateTestCase(TestCase):
+class ProjectTestCase(TestCase):
     def test_model_unicode(self):
-        template = TemplateFactory.create()
+        project = ProjectFactory.create()
 
-        self.assertEqual(unicode(template), template.name)
+        self.assertEqual(unicode(project), project.name)

@@ -11,7 +11,7 @@ class Language(models.Model):
         return self.name
 
 
-class Template(models.Model):
+class Project(models.Model):
     language = models.ForeignKey(Language, verbose_name=_('language'))
     name = models.CharField(_('name'), max_length=64)
     author = models.CharField(_('author'), max_length=64)

@@ -1,6 +1,6 @@
 # coding: utf-8
 import factory
-from templates.models import Language, Template
+from projects.models import Language, Project
 
 
 class LanguageFactory(factory.django.DjangoModelFactory):
@@ -9,8 +9,8 @@ class LanguageFactory(factory.django.DjangoModelFactory):
     name = u'Python'
 
 
-class TemplateFactory(factory.django.DjangoModelFactory):
-    FACTORY_FOR = Template
+class ProjectFactory(factory.django.DjangoModelFactory):
+    FACTORY_FOR = Project
 
     language = factory.SubFactory(LanguageFactory)
     name = u'cookiecutter-django-project'

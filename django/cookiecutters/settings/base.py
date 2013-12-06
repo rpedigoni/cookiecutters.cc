@@ -114,7 +114,7 @@ INSTALLED_APPS = (
     'south',
 
     # project apps
-    'templates',
+    'projects',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
