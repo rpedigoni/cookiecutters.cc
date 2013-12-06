@@ -1,6 +1,9 @@
 cookiecutters
 ==========================
 
+.. image:: https://api.travis-ci.org/rpedigoni/cookiecutters.cc.png
+        :target: https://api.travis-ci.org/rpedigoni/cookiecutters.cc
+
 Installation
 ------------
 
