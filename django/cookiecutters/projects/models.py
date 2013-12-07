@@ -7,6 +7,9 @@ from django.utils.translation import ugettext as _
 class Language(models.Model):
     name = models.CharField(_('name'), max_length=32)
 
+    class Meta:
+        ordering = ('name',)
+
     def __unicode__(self):
         return self.name
 
@@ -18,6 +21,9 @@ class Project(models.Model):
     repository_url = models.CharField(_('author'), max_length=64)
     description = models.TextField(_('description'))
     created_at = models.DateTimeField(_('created at'), default=now)
+
+    class Meta:
+        ordering = ('name',)
 
     def __unicode__(self):
         return self.name
