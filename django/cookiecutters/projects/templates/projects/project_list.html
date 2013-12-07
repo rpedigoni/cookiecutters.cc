@@ -1,14 +1,35 @@
-{% for language in object_list %}
-    <li>
-        {{ language.name }}
-        {% with language.template_set.all as templates %}
-            {% if templates %}
-                <ul>
-                    {% for template in templates %}
-                        <li>{{ template.name }}</li>
-                    {% endfor %}
-                </ul>
+{% extends "base.html" %}
+
+{% block content %}
+    {% for language in object_list %}
+        <div class="language-header">
+            <h2>{{ language.name }}</h2>
+        </div>
+        {% with language.project_set.all as projects %}
+            {% if projects %}
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Author</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for project in projects %}
+                            <tr>
+                                <td><a target="_blank" href="{{ repository_url }}">{{ project.name }}</a></td>
+                                <td>A project template for creating a generic front-end, non-jQuery JS widget packaged for multiple JS packaging systems.
+{{ project.description }}</td>
+                                <td><a href="http://github.com/{{ project.author }}">{{ project.author }}</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
             {% endif %}
         {% endwith %}
-    </li>
-{% endfor %}
+    {% endfor %}
+
+{% endblock content %}
