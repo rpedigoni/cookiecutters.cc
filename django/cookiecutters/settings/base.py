@@ -102,12 +102,12 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     # django contribs
-    # 'django.contrib.admin',
-    # 'django.contrib.auth',
+    'django.contrib.admin',
+    'django.contrib.auth',
     'django.contrib.contenttypes',
-    # 'django.contrib.sessions',
-    # 'django.contrib.sites',
-    # 'django.contrib.messages',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
     'django.contrib.staticfiles',
 
     # 3rd party apps

@@ -3,7 +3,7 @@
 {% block content %}
     {% for language in object_list %}
         <div class="language-header">
-            <h2>{{ language.name }}</h2>
+            <h3>{{ language.name }}</h3>
         </div>
         {% with language.project_set.all as projects %}
             {% if projects %}
@@ -19,7 +19,7 @@
                     <tbody>
                         {% for project in projects %}
                             <tr>
-                                <td><a target="_blank" href="{{ repository_url }}">{{ project.name }}</a></td>
+                                <td class="col-name"><a target="_blank" href="{{ repository_url }}">{{ project.name }}</a></td>
                                 <td>A project template for creating a generic front-end, non-jQuery JS widget packaged for multiple JS packaging systems.
 {{ project.description }}</td>
                                 <td><a href="http://github.com/{{ project.author }}">{{ project.author }}</a></td>
