@@ -19,9 +19,8 @@
                     <tbody>
                         {% for project in projects %}
                             <tr>
-                                <td class="col-name"><a target="_blank" href="{{ repository_url }}">{{ project.name }}</a></td>
-                                <td>A project template for creating a generic front-end, non-jQuery JS widget packaged for multiple JS packaging systems.
-{{ project.description }}</td>
+                                <td class="col-name"><a target="_blank" href="{{ project.repository_url }}">{{ project.name }}</a></td>
+                                <td>{{ project.description }}</td>
                                 <td><a href="http://github.com/{{ project.author }}">{{ project.author }}</a></td>
                             </tr>
                         {% endfor %}
